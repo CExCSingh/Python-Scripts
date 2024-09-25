@@ -9,3 +9,5 @@ sheetname = 'sheet_name'
 ```
 
 ## Each script will generate a new file with the script applied to it. The new file will be created in the directory in which the script is ran. 
+
+## Each script has a README.md file which will explain the script and what each variable is used for
