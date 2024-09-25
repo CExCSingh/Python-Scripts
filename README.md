@@ -7,3 +7,5 @@ Some Python Scripts to help format/process CSV files
 ```
 sheetname = 'sheet_name'
 ```
+
+## Each script will generate a new file with the script applied to it. The new file will be created in the directory in which the script is ran. 
