@@ -1,6 +1,6 @@
 # Filter-Script File
 
-This script will read a csv file and filter out all records which contain a specific value for a column selected
+This script will read a csv file and only keep records which contain a specific value for a column selected
 
 ## Inputs:
 
