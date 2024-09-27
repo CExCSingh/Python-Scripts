@@ -1,4 +1,5 @@
 import pandas as pd
+import sys
 
 def combineAndDropDuplicate(file_one_path,file_two_path,field_array,output_file_name):
 
@@ -14,8 +15,12 @@ def combineAndDropDuplicate(file_one_path,file_two_path,field_array,output_file_
 
 
 if __name__ == '__main__':
-    file_one_path = './one.csv'
-    file_two_path = './two.csv'
-    fields_array = ['first','last','age']
-    output_file_name = 'output.csv'
-    combineAndDropDuplicate(file_one_path, file_two_path, fields_array, output_file_name)
+    params = sys.argv
+    if len(params) >= 5:
+        file_one_path = params[1]
+        file_two_path = params[2]
+        output_file_name = params[3]
+        fields_array = params[4:]
+        combineAndDropDuplicate(file_one_path, file_two_path, fields_array, output_file_name)
+    else:
+        raise Exception('Incorrect number of parameters given. A minimum of 4 parameters are required')

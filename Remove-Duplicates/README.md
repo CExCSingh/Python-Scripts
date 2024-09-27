@@ -10,5 +10,14 @@ This script will read a csv file and remove all duplicate values from the csv
 
 ## This script will remove all duplicates of a value in a column, while keeping the first occurrence in the file
 - This is the default behavior of the .drop_duplicates method
-- To keep the last value, you can pass this as a second argument to the .drop_duplicates method:  keep='last'
 
+## CLI Tool
+- The cli tool will take 3 arguments
+    - The path to the file
+    - The field to filter and check for duplicates
+    - The name of the output file
+
+### Example
+```
+python cli ./file.csv first_name output.csv
+```

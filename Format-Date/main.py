@@ -1,12 +1,19 @@
 import pandas as pd
 
-df = pd.read_csv('A')
+def formatDate(file_path, field, current_format, output_file_name, desired_format=''):
 
-df['B'] = pd.to_datetime(
-    df['B'], format='C')
+    df = pd.read_csv(file_path)
+    df[field] = pd.to_datetime(
+        df[field], format=current_format)
+    if desired_format != '':
+        df[field] = df[field].dt.strftime(desired_format)
 
-# df['B'] = df['B'].dt.strftime('E')
+    df.to_csv(output_file_name, index=False)
 
-df.to_csv('D', index=False)
-
-# Please refer to README to see what each variable is for
+if __name__ == '__main__':
+    file_path = ''
+    field = ''
+    current_format = ''
+    output_file_name = ''
+    desired_format = ''
+    formatDate(file_path, field, current_format, output_file_name, desired_format)
